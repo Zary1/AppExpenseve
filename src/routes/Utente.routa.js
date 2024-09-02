@@ -1,7 +1,13 @@
-const express=require ("express")
-const router=express()
-const UtenteController=require("../controlles/Utente.Controles")
 
-router.post("/",UtenteController.UtenteCreateControle)
+import express from 'express'
+import  UtenteController from "../controlles/Utente.Controles.js"
+const router=express()
+
+
+router.post("/create",UtenteController.UtenteCreateControle)
 router.get("/",UtenteController.FindAllUtente)
-module.exports=router
+router.get("/:id",UtenteController.BuscarId)
+router.patch("/:id",UtenteController.UpdateUtente)
+
+export default router
+

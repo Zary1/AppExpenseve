@@ -1,10 +1,10 @@
-const moogose=require("mongoose")
-require("dotenv").config()
+import mongoose from "mongoose"
+
 
 const db= async()=>{
 
     try{
-        await moogose.connect(process.env.MONGO_URL)
+        await mongoose.connect(process.env.MONGO_URL)
         console.log("mongo conectado");
 
     }catch(err){
@@ -13,7 +13,7 @@ const db= async()=>{
 
 }
 
-module.exports=db
+export default db
 
 
 

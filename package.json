@@ -1,6 +1,7 @@
 {
   "name": "expenseapp",
   "version": "1.0.0",
+  "type": "module",
   "description": "Expense Tracker Application",
   "main": "index.js",
   "scripts": {
@@ -17,6 +18,7 @@
   },
   "homepage": "https://github.com/Zary1/ExpenseApp#readme",
   "dependencies": {
+    "bcrypt": "^5.1.1",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
     "express": "^4.19.2",
